@@ -1,0 +1,132 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-10-30T17:37:04.882Z",
+  "item": {
+    "title": "NIE Capacity Map"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "analysis",
+    "showHeader": false,
+    "theme": {
+      "mode": "light",
+      "accent": "default"
+    },
+    "layout": {
+      "footer": {
+        "hidden": false,
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "capacity-mode-dialog",
+            "title": "Capacity mode"
+          },
+          {
+            "type": "customMount",
+            "id": "substation-type-dialog",
+            "title": "Substation type"
+          },
+          {
+            "type": "customMount",
+            "id": "voltage-level-dialog",
+            "title": "Voltage level"
+          }
+        ]
+      }
+    },
+    "widgets": [
+      {
+        "id": "default-home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "default-scale-bar",
+        "type": "scaleBar",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "hide-app-title-container",
+        "label": "Hide App Title Container",
+        "bundlePath": "./runtime/behaviors/hide-app-title-container-f7f9201c3cbf1fef.js",
+        "sourceSha256": "f7f9201c3cbf1fef1b1be7e3df1511f7a58b6c0c4c8af8b70e7b21cefd379b39",
+        "modulePaths": [],
+        "config": {},
+        "mounts": [],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T20:13:35.195Z"
+      },
+      {
+        "id": "live-capacity-graphics",
+        "label": "Live Capacity Graphics",
+        "bundlePath": "./runtime/behaviors/live-capacity-graphics-c8645e10f050a813.js",
+        "sourceSha256": "c8645e10f050a813d6dd2614620f8b0cc0ad82eb4219054b7b261f7621c1fd2a",
+        "modulePaths": [
+          "esri/Graphic",
+          "esri/geometry/support/webMercatorUtils",
+          "esri/layers/FeatureLayer",
+          "esri/layers/GraphicsLayer",
+          "esri/symbols/CIMSymbol"
+        ],
+        "config": {
+          "serviceUrl": "https://services.arcgis.com/pMnvm7HXxTmNXxGi/arcgis/rest/services/____________________4bb4xZ/FeatureServer/0"
+        },
+        "mounts": [
+          "capacity-mode-dialog",
+          "substation-type-dialog",
+          "voltage-level-dialog"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T20:19:58.683Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "197a4538-80a4-4a84-95f4-34246f495ffd",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-5ced2191-199c-44cb-a099-67a5b65b96e8",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-10-30T17:37:04.882Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}

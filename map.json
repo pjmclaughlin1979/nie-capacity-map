@@ -1,0 +1,396 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1a18e348723-layer-2",
+      "title": " 4bb4xZ - Capacity Map for Network Sites",
+      "url": "https://services.arcgis.com/pMnvm7HXxTmNXxGi/arcgis/rest/services/____________________4bb4xZ/FeatureServer/0",
+      "visibility": false,
+      "layerType": "ArcGISFeatureLayer",
+      "blendMode": "normal",
+      "layerDefinition": {
+        "drawingInfo": {
+          "labelingInfo": [
+            {
+              "labelExpressionInfo": {
+                "expression": "var siteType = Upper(Trim(DefaultValue($feature.Type, '')));\nif (siteType == 'PRI') { return 'P'; }\nif (siteType == 'CSP') { return 'PP'; }\nif (siteType == 'BSP') { return 'BP'; }\nreturn siteType;"
+              },
+              "labelPlacement": "esriServerPointLabelPlacementCenterCenter",
+              "maxScale": 0,
+              "minScale": 350000,
+              "repeatLabel": true,
+              "symbol": {
+                "type": "esriTS",
+                "color": [
+                  255,
+                  255,
+                  255,
+                  255
+                ],
+                "font": {
+                  "family": "Noto Sans",
+                  "size": 8,
+                  "weight": "bold"
+                },
+                "horizontalAlignment": "center",
+                "kerning": true,
+                "haloColor": [
+                  38,
+                  50,
+                  56,
+                  255
+                ],
+                "haloSize": 0.8,
+                "rotated": false,
+                "text": "",
+                "verticalAlignment": "baseline",
+                "xoffset": 0,
+                "yoffset": 0,
+                "angle": 0
+              }
+            }
+          ],
+          "renderer": {
+            "type": "uniqueValue",
+            "valueExpression": "var type = Upper($feature.Type);\nif (type == 'BSP') { return DefaultValue($feature[\"Demand_Headroom_RAG_BSP\"], 'Not classified'); }\nreturn DefaultValue($feature[\"Demand_Headroom_RAG_PRI\"], 'Not classified');",
+            "valueExpressionTitle": "Demand status (site-level)",
+            "defaultLabel": "Not classified / not applicable",
+            "defaultSymbol": {
+              "type": "esriSMS",
+              "color": [
+                112,
+                112,
+                112,
+                255
+              ],
+              "angle": 0,
+              "xoffset": 0,
+              "yoffset": 0,
+              "size": 25,
+              "style": "esriSMSPath",
+              "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+              "outline": {
+                "type": "esriSLS",
+                "color": [
+                  255,
+                  255,
+                  255,
+                  255
+                ],
+                "width": 1.5,
+                "style": "esriSLSSolid"
+              }
+            },
+            "uniqueValueGroups": [
+              {
+                "classes": [
+                  {
+                    "label": "Green — available headroom",
+                    "symbol": {
+                      "type": "esriSMS",
+                      "color": [
+                        46,
+                        133,
+                        64,
+                        255
+                      ],
+                      "angle": 0,
+                      "xoffset": 0,
+                      "yoffset": 0,
+                      "size": 25,
+                      "style": "esriSMSPath",
+                      "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                      "outline": {
+                        "type": "esriSLS",
+                        "color": [
+                          255,
+                          255,
+                          255,
+                          255
+                        ],
+                        "width": 1.5,
+                        "style": "esriSLSSolid"
+                      }
+                    },
+                    "values": [
+                      [
+                        "Green"
+                      ]
+                    ]
+                  },
+                  {
+                    "label": "Amber — limited headroom",
+                    "symbol": {
+                      "type": "esriSMS",
+                      "color": [
+                        245,
+                        166,
+                        35,
+                        255
+                      ],
+                      "angle": 0,
+                      "xoffset": 0,
+                      "yoffset": 0,
+                      "size": 25,
+                      "style": "esriSMSPath",
+                      "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                      "outline": {
+                        "type": "esriSLS",
+                        "color": [
+                          255,
+                          255,
+                          255,
+                          255
+                        ],
+                        "width": 1.5,
+                        "style": "esriSLSSolid"
+                      }
+                    },
+                    "values": [
+                      [
+                        "Amber"
+                      ]
+                    ]
+                  },
+                  {
+                    "label": "Red — constrained capacity",
+                    "symbol": {
+                      "type": "esriSMS",
+                      "color": [
+                        214,
+                        69,
+                        69,
+                        255
+                      ],
+                      "angle": 0,
+                      "xoffset": 0,
+                      "yoffset": 0,
+                      "size": 25,
+                      "style": "esriSMSPath",
+                      "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                      "outline": {
+                        "type": "esriSLS",
+                        "color": [
+                          255,
+                          255,
+                          255,
+                          255
+                        ],
+                        "width": 1.5,
+                        "style": "esriSLSSolid"
+                      }
+                    },
+                    "values": [
+                      [
+                        "Red"
+                      ]
+                    ]
+                  },
+                  {
+                    "label": "Blue — status requires review",
+                    "symbol": {
+                      "type": "esriSMS",
+                      "color": [
+                        56,
+                        108,
+                        176,
+                        255
+                      ],
+                      "angle": 0,
+                      "xoffset": 0,
+                      "yoffset": 0,
+                      "size": 25,
+                      "style": "esriSMSPath",
+                      "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                      "outline": {
+                        "type": "esriSLS",
+                        "color": [
+                          255,
+                          255,
+                          255,
+                          255
+                        ],
+                        "width": 1.5,
+                        "style": "esriSLSSolid"
+                      }
+                    },
+                    "values": [
+                      [
+                        "Blue"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ],
+            "uniqueValueInfos": [
+              {
+                "label": "Green — available headroom",
+                "symbol": {
+                  "type": "esriSMS",
+                  "color": [
+                    46,
+                    133,
+                    64,
+                    255
+                  ],
+                  "angle": 0,
+                  "xoffset": 0,
+                  "yoffset": 0,
+                  "size": 25,
+                  "style": "esriSMSPath",
+                  "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                  "outline": {
+                    "type": "esriSLS",
+                    "color": [
+                      255,
+                      255,
+                      255,
+                      255
+                    ],
+                    "width": 1.5,
+                    "style": "esriSLSSolid"
+                  }
+                },
+                "value": "Green"
+              },
+              {
+                "label": "Amber — limited headroom",
+                "symbol": {
+                  "type": "esriSMS",
+                  "color": [
+                    245,
+                    166,
+                    35,
+                    255
+                  ],
+                  "angle": 0,
+                  "xoffset": 0,
+                  "yoffset": 0,
+                  "size": 25,
+                  "style": "esriSMSPath",
+                  "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                  "outline": {
+                    "type": "esriSLS",
+                    "color": [
+                      255,
+                      255,
+                      255,
+                      255
+                    ],
+                    "width": 1.5,
+                    "style": "esriSLSSolid"
+                  }
+                },
+                "value": "Amber"
+              },
+              {
+                "label": "Red — constrained capacity",
+                "symbol": {
+                  "type": "esriSMS",
+                  "color": [
+                    214,
+                    69,
+                    69,
+                    255
+                  ],
+                  "angle": 0,
+                  "xoffset": 0,
+                  "yoffset": 0,
+                  "size": 25,
+                  "style": "esriSMSPath",
+                  "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                  "outline": {
+                    "type": "esriSLS",
+                    "color": [
+                      255,
+                      255,
+                      255,
+                      255
+                    ],
+                    "width": 1.5,
+                    "style": "esriSLSSolid"
+                  }
+                },
+                "value": "Red"
+              },
+              {
+                "label": "Blue — status requires review",
+                "symbol": {
+                  "type": "esriSMS",
+                  "color": [
+                    56,
+                    108,
+                    176,
+                    255
+                  ],
+                  "angle": 0,
+                  "xoffset": 0,
+                  "yoffset": 0,
+                  "size": 25,
+                  "style": "esriSMSPath",
+                  "path": "M0,-13 C-7.2,-13 -12,-7.7 -12,-0.5 C-12,8 0,17 0,17 C0,17 12,8 12,-0.5 C12,-7.7 7.2,-13 0,-13 Z",
+                  "outline": {
+                    "type": "esriSLS",
+                    "color": [
+                      255,
+                      255,
+                      255,
+                      255
+                    ],
+                    "width": 1.5,
+                    "style": "esriSLSSolid"
+                  }
+                },
+                "value": "Blue"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "195e0bf7e35-layer-2",
+        "title": "Open Basemap Light Gray Canvas Base",
+        "itemId": "0c1d9bb1e7844cb287d0f01d55aeccec",
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/0c1d9bb1e7844cb287d0f01d55aeccec/resources/styles/root.json"
+      },
+      {
+        "id": "199304fc38f-layer-125",
+        "title": "Open Basemap Light Gray Canvas Reference (for Developers)",
+        "itemId": "c7421e830f894a5c8edc78af967a5428",
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://www.arcgis.com/sharing/rest/content/items/c7421e830f894a5c8edc78af967a5428/resources/styles/root.json",
+        "isReference": true
+      }
+    ],
+    "title": "Open Basemap (Light Gray Canvas)"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -1047684.2781067467,
+        "ymin": 7091779.503562612,
+        "xmax": -465539.8706868784,
+        "ymax": 7492921.028003193
+      },
+      "scale": 2311162.2171549797,
+      "rotation": 0
+    }
+  }
+}
