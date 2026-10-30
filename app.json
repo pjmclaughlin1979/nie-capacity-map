@@ -18,24 +18,15 @@
       "accent": "default"
     },
     "layout": {
-      "footer": {
+      "right": {
         "hidden": false,
-        "collapsed": false,
+        "width": "320px",
+        "title": "Capacity filters",
+        "collapsed": true,
         "blocks": [
           {
             "type": "customMount",
-            "id": "capacity-mode-dialog",
-            "title": "Capacity mode"
-          },
-          {
-            "type": "customMount",
-            "id": "substation-type-dialog",
-            "title": "Substation type"
-          },
-          {
-            "type": "customMount",
-            "id": "voltage-level-dialog",
-            "title": "Voltage level"
+            "id": "capacity-filter-panel"
           }
         ]
       }
@@ -88,9 +79,9 @@
       },
       {
         "id": "live-capacity-graphics",
-        "label": "Live Capacity Graphics",
-        "bundlePath": "./runtime/behaviors/live-capacity-graphics-c8645e10f050a813.js",
-        "sourceSha256": "c8645e10f050a813d6dd2614620f8b0cc0ad82eb4219054b7b261f7621c1fd2a",
+        "label": "Live Capacity Graphics and Side Panel Filters",
+        "bundlePath": "./runtime/behaviors/live-capacity-graphics-254bc4c5188681c0.js",
+        "sourceSha256": "254bc4c5188681c0e89249cb7c8d96353cde6a447b63498650969ccaeae303f6",
         "modulePaths": [
           "esri/Graphic",
           "esri/geometry/support/webMercatorUtils",
@@ -102,13 +93,11 @@
           "serviceUrl": "https://services.arcgis.com/pMnvm7HXxTmNXxGi/arcgis/rest/services/____________________4bb4xZ/FeatureServer/0"
         },
         "mounts": [
-          "capacity-mode-dialog",
-          "substation-type-dialog",
-          "voltage-level-dialog"
+          "capacity-filter-panel"
         ],
         "ownedLayerIds": [],
         "interactions": [],
-        "installedAt": "2026-10-30T20:19:58.683Z"
+        "installedAt": "2026-10-30T20:38:47.054Z"
       }
     ]
   },
