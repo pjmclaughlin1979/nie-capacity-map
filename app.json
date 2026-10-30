@@ -18,6 +18,18 @@
       "accent": "default"
     },
     "layout": {
+      "left": {
+        "hidden": false,
+        "width": "390px",
+        "title": "Site details",
+        "collapsed": true,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "capacity-site-details"
+          }
+        ]
+      },
       "right": {
         "hidden": false,
         "width": "320px",
@@ -45,12 +57,6 @@
         "config": {}
       },
       {
-        "id": "default-legend",
-        "type": "legend",
-        "slot": "bottom-left",
-        "config": {}
-      },
-      {
         "id": "default-layer-list",
         "type": "layerList",
         "slot": "top-right",
@@ -61,6 +67,16 @@
         "type": "basemapGallery",
         "slot": "top-right",
         "config": {}
+      },
+      {
+        "id": "address-search",
+        "type": "search",
+        "slot": "top-left",
+        "title": "Search for an address",
+        "config": {
+          "placeholder": "Search for an address or place",
+          "includeDefaultSources": true
+        }
       }
     ],
     "interactions": [],
@@ -98,6 +114,81 @@
         "ownedLayerIds": [],
         "interactions": [],
         "installedAt": "2026-10-30T20:38:47.054Z"
+      },
+      {
+        "id": "capacity-prompt-panel",
+        "label": "Natural Language Capacity Prompts",
+        "bundlePath": "./runtime/behaviors/capacity-prompt-panel-accbdb2a3f24e293.js",
+        "sourceSha256": "accbdb2a3f24e2933f7ca70b9bcaa022b83da2ba1e2541048f8457d3e2c4c614",
+        "modulePaths": [],
+        "config": {
+          "graphicsLayerId": "live-capacity-graphics"
+        },
+        "mounts": [],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T20:49:25.080Z"
+      },
+      {
+        "id": "capacity-symbol-legend",
+        "label": "Capacity Graphics Symbol Legend",
+        "bundlePath": "./runtime/behaviors/capacity-symbol-legend-20d661033154e6fc.js",
+        "sourceSha256": "20d661033154e6fcac957afca7260fe61daf7dbc472fd36c886ecfbae2844a9f",
+        "modulePaths": [],
+        "config": {},
+        "mounts": [],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T20:53:06.489Z"
+      },
+      {
+        "id": "capacity-attribute-details",
+        "label": "Full Capacity Attribute Side Panel",
+        "bundlePath": "./runtime/behaviors/capacity-attribute-details-d31f8015893372a7.js",
+        "sourceSha256": "d31f8015893372a704b416943a914d73f4f12df8c6c393674d22411d66c86c2d",
+        "modulePaths": [
+          "esri/layers/FeatureLayer"
+        ],
+        "config": {
+          "serviceUrl": "https://services.arcgis.com/pMnvm7HXxTmNXxGi/arcgis/rest/services/____________________4bb4xZ/FeatureServer/0"
+        },
+        "mounts": [
+          "capacity-site-details"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T21:00:03.890Z"
+      },
+      {
+        "id": "capacity-status-popups",
+        "label": "Capacity Status Circle Popups with Details",
+        "bundlePath": "./runtime/behaviors/capacity-status-popups-f86085584aca53fd.js",
+        "sourceSha256": "f86085584aca53fddcd4bbf8207332c798e79593d4315742cf815d74207f1a0d",
+        "modulePaths": [
+          "esri/layers/FeatureLayer"
+        ],
+        "config": {
+          "serviceUrl": "https://services.arcgis.com/pMnvm7HXxTmNXxGi/arcgis/rest/services/____________________4bb4xZ/FeatureServer/0",
+          "graphicsLayerId": "live-capacity-graphics"
+        },
+        "mounts": [],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T21:00:04.531Z"
+      },
+      {
+        "id": "capacity-hover-popup",
+        "label": "Capacity Popups on Mouseover",
+        "bundlePath": "./runtime/behaviors/capacity-hover-popup-b6be04452a56780b.js",
+        "sourceSha256": "b6be04452a56780be77b1dd7ea73cac28364956f45e476f649ed85bc364c0a21",
+        "modulePaths": [],
+        "config": {
+          "graphicsLayerId": "live-capacity-graphics"
+        },
+        "mounts": [],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-30T21:00:15.307Z"
       }
     ]
   },
