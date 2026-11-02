@@ -1,7 +1,7 @@
 {
   "kind": "arcgis-nova-deployable-app",
   "version": "0.1",
-  "generatedAt": "2026-10-30T21:02:15.433Z",
+  "generatedAt": "2026-11-02T12:35:32.539Z",
   "title": "NIE Capacity Map",
   "authMode": "oauth",
   "entry": "index.html",
@@ -13,6 +13,6 @@
     "auth": "standalone-auth.js"
   },
   "portalUrl": "https://www.arcgis.com",
-  "appId": "m81o5Fo9WrJoVOfZ",
+  "appId": "mf9dRDCWTpNUMJt1",
   "deploymentUrl": "https://pjmclaughlin1979.github.io/nie-capacity-map/"
 }

@@ -177,18 +177,28 @@
         "installedAt": "2026-10-30T21:00:04.531Z"
       },
       {
-        "id": "capacity-hover-popup",
-        "label": "Capacity Popups on Mouseover",
-        "bundlePath": "./runtime/behaviors/capacity-hover-popup-b6be04452a56780b.js",
-        "sourceSha256": "b6be04452a56780be77b1dd7ea73cac28364956f45e476f649ed85bc364c0a21",
+        "id": "dark-mode-toggle",
+        "label": "Complete Light and Dark Mode Toggle",
+        "bundlePath": "./runtime/behaviors/dark-mode-toggle-fc8eb558d6d4cc0f.js",
+        "sourceSha256": "fc8eb558d6d4cc0fc9b907d9b924ff35502b11181abbd24406dc1ea58a88cf3a",
         "modulePaths": [],
-        "config": {
-          "graphicsLayerId": "live-capacity-graphics"
-        },
+        "config": {},
         "mounts": [],
         "ownedLayerIds": [],
         "interactions": [],
-        "installedAt": "2026-10-30T21:00:15.307Z"
+        "installedAt": "2026-11-02T12:31:58.801Z"
+      },
+      {
+        "id": "rounded-map-components",
+        "label": "Rounded Map Controls and Popups",
+        "bundlePath": "./runtime/behaviors/rounded-map-components-b0b32b8ffdc771ec.js",
+        "sourceSha256": "b0b32b8ffdc771ec19570c44b8fda17bce85812c763245747c7632fa592fe6b2",
+        "modulePaths": [],
+        "config": {},
+        "mounts": [],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-02T12:32:33.767Z"
       }
     ]
   },
